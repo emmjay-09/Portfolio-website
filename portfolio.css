@@ -296,8 +296,15 @@ img {
     width: 200px;
     height: 200px;
   }
+  .about p {
+    font-size: 18px;
+    color: blue;
+  }
 }
 @media (max-width: 400px) {
+  .about p {
+    font-size: 15px;
+  }
   .img-box {
     width: 150px;
     height: 150px;
@@ -331,5 +338,11 @@ img {
   }
   .head ul li {
     margin: 5px;
+  }
+}
+
+@media (min-height: 633px) {
+  section {
+    width: 90%;
   }
 }
