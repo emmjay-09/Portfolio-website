@@ -86,6 +86,7 @@ section {
 .home-info p {
   font-size: 17px;
   margin: 10px 0px 0px 10%;
+  z-index: 10;
 }
 
 .home-info h1 {
@@ -179,7 +180,6 @@ section {
   overflow: hidden;
   z-index: 1;
   border: 2px solid;
-  background: conic;
 }
 
 img {
@@ -202,7 +202,6 @@ img {
 @keyframes show-edge {
   100% {
     transform: rotate(20deg);
-    margin-left: 90%;
   }
 }
 
@@ -216,7 +215,6 @@ img {
 .paragraphs {
   margin: 100px 20px 0px 20px;
   font-size: 20px;
-  z-index: 10;
 }
 
 .contact {
@@ -301,9 +299,9 @@ img {
 }
 @media (max-width: 400px) {
   .img-box {
-    width: 170px;
-    height: 170px;
-    margin: 200px 0px -120px 0px;
+    width: 150px;
+    height: 150px;
+    margin: 100px 0px -120px 0px;
   }
   .home {
     display: flex;
@@ -311,6 +309,22 @@ img {
   }
   .home-info h1 {
     font-size: 25px;
+  }
+  #name {
+    margin-top: 0px;
+    margin-bottom: 20px;
+  }
+  .title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .home-info p {
+    margin-top: 10px;
+    margin-bottom: 90px;
+    z-index: -1;
+  }
+  .btn {
+    top: 90%;
   }
   .head ul li a {
     font-size: 12px;
