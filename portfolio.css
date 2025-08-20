@@ -2,12 +2,13 @@ body {
   box-sizing: border-box;
   background-color: #ded7f8;
   margin: 0;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 .head {
   background-color: rgb(69, 54, 206);
   height: 12%;
-  margin-top: 0%;
+  margin: 0%;
   position: fixed;
   width: 100%;
   top: 0;
@@ -24,7 +25,7 @@ body {
 }
 
 .head ul li {
-  margin: 10px;
+  margin: 5%;
   padding-bottom: 20px;
 }
 
@@ -45,7 +46,6 @@ body {
 
 section {
   height: 100vh;
-  display: flex;
 }
 
 .home {
@@ -65,7 +65,7 @@ section {
   margin-top: 0;
   animation: button-scale 2.5s ease-in-out infinite;
   position: absolute;
-  top: 450px;
+  top: 80%;
   right: 30%;
 }
 
@@ -89,13 +89,49 @@ section {
 }
 
 .home-info h1 {
-  margin: 0px 0px 1% 30%;
+  margin: 0px 0px 1% 28%;
   font-size: 30px;
   color: #ded7f8;
   -webkit-text-stroke: 0.7px blue;
-  animation: scale-text 3s forwards;
+  animation: scale-text 4s forwards;
 }
 
+.home-info span {
+  color: transparent;
+  -webkit-text-stroke: 0.5px blue;
+  position: relative;
+  animation: display-text 10s linear infinite;
+  animation-delay: calc(var(--i) * -5s);
+}
+
+.home-info span::before {
+  content: attr(data-text);
+  color: black;
+  position: absolute;
+  width: 0%;
+  border-right: 2px solid black;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: fill-text 2.5s linear infinite;
+}
+
+@keyframes fill-text {
+  10%,
+  100% {
+    width: 0;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+@keyframes display-text {
+  25%,
+  100% {
+    display: none;
+  }
+}
 @keyframes scale-text {
   100% {
     transform: scale3d(1.5, 1.5, 1);
@@ -105,8 +141,11 @@ section {
 }
 
 .title {
+  display: inline-block;
   margin: 10px 0 10px 10%;
   font-size: 25px;
+  color: black;
+  -webkit-text-stroke: 0.5px blue;
 }
 
 #name {
@@ -118,14 +157,15 @@ section {
   width: 250px;
   height: 250px;
   border-radius: 50%;
-  padding: 2px;
+  padding: 5px;
   position: relative;
   justify-content: center;
   align-items: center;
   display: flex;
   overflow: hidden;
   margin-right: 3dvh;
-  background: blue;
+  animation: rotate-border 3s linear infinite;
+  background: conic-gradient(blue, blueviolet);
 }
 
 .img-item {
@@ -138,6 +178,8 @@ section {
   align-items: center;
   overflow: hidden;
   z-index: 1;
+  border: 2px solid;
+  background: conic;
 }
 
 img {
@@ -145,7 +187,6 @@ img {
   display: block;
   width: 100%;
   object-fit: cover;
-  mix-blend-mode: darken;
 }
 
 .edge-transform {
@@ -153,11 +194,11 @@ img {
   height: 120vh;
   position: fixed;
   bottom: -30%;
-  z-index: -10;
   background: blue;
   margin-left: 100%;
   animation: show-edge 1s linear forwards;
 }
+
 @keyframes show-edge {
   100% {
     transform: rotate(20deg);
@@ -168,11 +209,88 @@ img {
 .about {
   display: flex;
   flex-direction: column;
+  background-color: rgb(29, 26, 26);
+  color: white;
 }
 
 .paragraphs {
   margin: 100px 20px 0px 20px;
   font-size: 20px;
+  z-index: 10;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(29, 26, 26);
+  color: white;
+  padding: 50px;
+}
+
+.contact h1 {
+  margin-top: 50px;
+  font-size: x-large;
+}
+
+.contact p {
+  line-height: 30px;
+}
+
+.linkedin i {
+  font-size: 40px;
+  color: blueviolet;
+  margin-top: 20px;
+  animation: shake-icon 1s infinite;
+}
+
+.linkedin a {
+  color: blue;
+}
+
+.phone i {
+  font-size: 40px;
+  color: blueviolet;
+  margin-top: 20px;
+  animation: shake-icon 1.2s infinite, rotate-phone 1s infinite;
+}
+
+@keyframes shake-icon {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-phone {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.phone a {
+  color: blue;
+}
+
+.mail i {
+  font-size: 40px;
+  color: blueviolet;
+  margin-top: 20px;
+  animation: shake-icon 1.4s infinite;
+}
+
+.mail a {
+  color: blue;
 }
 
 @media (max-width: 500px) {
