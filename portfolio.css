@@ -346,6 +346,9 @@ img {
 }
 
 @media (max-width: 300px) {
+  .contact{
+    width: 80%;
+  }
   .about p {
     font-size: 14px;
   }
