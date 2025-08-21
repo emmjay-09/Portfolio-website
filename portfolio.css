@@ -310,8 +310,8 @@ img {
   }
 }
 
-@media (max-width:600px) {
-  .contact{
+@media (max-width: 600px) {
+  .contact {
     width: 85%;
   }
 }
@@ -391,8 +391,8 @@ img {
   }
 }
 
-@media (min-height:623px) {
-  section{
+@media (min-height: 623px) {
+  section {
     height: 110vh;
   }
 }
