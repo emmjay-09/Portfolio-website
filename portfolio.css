@@ -1,9 +1,10 @@
 body {
   box-sizing: border-box;
-  background-color: #ded7f8;
-  margin: 0;
+  background-color: hsl(253, 70%, 91%);
   overflow-x: hidden;
   scroll-behavior: smooth;
+  border: 5px solid blue;
+  margin: 0;
 }
 .head {
   background-color: rgb(69, 54, 206);
@@ -46,6 +47,7 @@ body {
 
 section {
   height: 100vh;
+  width: 100%;
 }
 
 .home {
@@ -86,7 +88,7 @@ section {
 .home-info p {
   font-size: 17px;
   margin: 10px 0px 0px 10%;
-  z-index: 10;
+  width: 70%;
 }
 
 .home-info h1 {
@@ -101,8 +103,8 @@ section {
   color: transparent;
   -webkit-text-stroke: 0.5px blue;
   position: relative;
-  animation: display-text 10s linear infinite;
-  animation-delay: calc(var(--i) * -5s);
+  animation: display-text 8s linear infinite;
+  animation-delay: calc(var(--i) * -2s);
 }
 
 .home-info span::before {
@@ -113,7 +115,7 @@ section {
   border-right: 2px solid black;
   white-space: nowrap;
   overflow: hidden;
-  animation: fill-text 2.5s linear infinite;
+  animation: fill-text 3s linear infinite;
 }
 
 @keyframes fill-text {
@@ -150,7 +152,8 @@ section {
 }
 
 #name {
-  font-size: 35px;
+  font-size: 25px;
+  font-weight: bolder;
   margin: 0 0 0 10%;
 }
 
@@ -167,6 +170,7 @@ section {
   margin-right: 3dvh;
   animation: rotate-border 3s linear infinite;
   background: conic-gradient(blue, blueviolet);
+  left: -120px;
 }
 
 .img-item {
@@ -210,10 +214,12 @@ img {
   flex-direction: column;
   background-color: rgb(29, 26, 26);
   color: white;
+  border: 2px solid blue;
+  width: 100%;
 }
 
 .paragraphs {
-  margin: 100px 20px 0px 20px;
+  margin: 100px 10% 0px 10%;
   font-size: 20px;
 }
 
@@ -291,25 +297,23 @@ img {
   color: blue;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .img-box {
-    width: 200px;
-    height: 200px;
-  }
-  .about p {
-    font-size: 18px;
-    color: blue;
+    left: -40px;
+    width: 180px;
+    height: 180px;
   }
 }
-@media (max-width: 400px) {
-  .about p {
-    font-size: 15px;
-  }
+@media (max-width: 500px) {
   .img-box {
     width: 150px;
     height: 150px;
     margin: 100px 0px -120px 0px;
   }
+  .about p {
+    font-size: 18px;
+  }
+
   .home {
     display: flex;
     flex-direction: column-reverse;
@@ -338,6 +342,21 @@ img {
   }
   .head ul li {
     margin: 5px;
+  }
+}
+
+@media (max-width: 300px) {
+  .about p {
+    font-size: 14px;
+  }
+  .img-box {
+    position: absolute;
+    left: 80px;
+    width: 100px;
+    height: 100px;
+  }
+  #name {
+    font-size: 21px;
   }
 }
 
