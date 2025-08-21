@@ -303,8 +303,15 @@ img {
     width: 180px;
     height: 180px;
   }
+  .head {
+    font-size: 13px;
+  }
 }
+
 @media (max-width: 500px) {
+  .head {
+    width: 70%;
+  }
   .img-box {
     width: 150px;
     height: 150px;
@@ -345,7 +352,17 @@ img {
   }
 }
 
+@media (max-width: 350px) {
+  .head {
+    width: 80%;
+    border: 2px solid;
+  }
+}
+
 @media (max-width: 300px) {
+  .head{
+    width: 90%;
+  }
   .about p {
     font-size: 14px;
   }
