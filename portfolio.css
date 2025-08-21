@@ -343,12 +343,12 @@ img {
   .head ul li {
     margin: 5px;
   }
-}
-
-@media (max-width: 300px) {
   .contact{
     width: 80%;
   }
+}
+
+@media (max-width: 300px) {
   .about p {
     font-size: 14px;
   }
