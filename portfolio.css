@@ -362,6 +362,6 @@ img {
 
 @media (min-height: 633px) {
   section {
-    width: 110%;
+    width: 100%;
   }
 }
