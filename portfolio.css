@@ -1,9 +1,8 @@
 body {
   box-sizing: border-box;
   background-color: hsl(253, 70%, 91%);
-   overflow-x: hidden; 
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  /* border: 5px solid blue; */
   margin: 0;
 }
 .head {
@@ -14,7 +13,7 @@ body {
   width: 90%;
   border-radius: 10px;
   top: 0;
- right: 0;
+  left: 0;
   z-index: 100;
 }
 
@@ -227,7 +226,7 @@ img {
   flex-direction: column;
   background-color: rgb(29, 26, 26);
   color: white;
-  width: 85%;
+  width: 100%;
   padding: 50px;
 }
 
@@ -238,6 +237,7 @@ img {
 
 .contact p {
   line-height: 30px;
+  width: 75%;
 }
 
 .linkedin i {
@@ -297,7 +297,6 @@ img {
   color: blue;
 }
 
-
 @media (max-width: 800px) {
   .img-box {
     left: -40px;
@@ -312,7 +311,7 @@ img {
     margin: 100px 0px -120px 0px;
   }
   .about p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .home {
@@ -344,9 +343,6 @@ img {
   .head ul li {
     margin: 5px;
   }
-  .contact{
-    width: 50%;
-  }
 }
 
 @media (max-width: 300px) {
@@ -361,11 +357,5 @@ img {
   }
   #name {
     font-size: 21px;
-  }
-}
-
-@media (min-height: 633px) {
-  section {
-    width: 100%;
   }
 }
