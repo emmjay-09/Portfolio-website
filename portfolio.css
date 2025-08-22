@@ -86,7 +86,7 @@ section {
 }
 
 .home-info p {
-  font-size: 17px;
+  font-size: 25px;
   margin: 10px 0px 0px 10%;
   width: 70%;
 }
@@ -315,7 +315,6 @@ img {
 
 .service {
   padding: 10%;
-  border: 2px solid;
   width: 82%;
 }
 
@@ -395,9 +394,11 @@ img {
   }
   .home-info p {
     margin-top: 10px;
+    font-size: 22px;
+    margin-bottom: 180px;
   }
   .btn {
-    top: 70%;
+    top: 80%;
     left: 70%;
     width: 100px;
   }
@@ -409,12 +410,6 @@ img {
   }
   .contact {
     width: 77%;
-  }
-}
-
-@media (max-width: 350px) {
-  .contact {
-    width: 68%;
   }
   .contact h1 {
     margin-top: 0px;
@@ -434,12 +429,53 @@ img {
     margin-top: 0;
     font-size: 20px;
   }
+}
+
+@media (max-width: 350px) {
+  .head ul li a {
+    font-size: 12px;
+  }
+  .contact {
+    width: 68%;
+  }
+  .contact h1 {
+    margin-top: 0px;
+  }
+  .contact p {
+    font-size: 15px;
+    margin-bottom: 0px;
+  }
+  .linkedin a {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .linkedin i {
+    font-size: 30px;
+  }
+  .phone i {
+    font-size: 30px;
+  }
+  .mail i {
+    font-size: 30px;
+  }
+  .phone a {
+    margin-top: 0;
+    font-size: 15px;
+  }
+  .mail a {
+    margin-top: 0;
+    font-size: 15px;
+  }
   .service {
     font-size: 11px;
   }
 }
 
 @media (max-width: 300px) {
+  .contact p {
+    font-size: 10px;
+    height: 350px;
+  }
   .about p {
     font-size: 14px;
   }
@@ -452,6 +488,9 @@ img {
   #name {
     font-size: 21px;
   }
+  .service {
+    font-size: 9px;
+  }
 }
 
 @media (min-height: 623px) {
@@ -459,3 +498,5 @@ img {
     height: 110vh;
   }
 }
+
+/* test animation timing */
