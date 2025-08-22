@@ -69,13 +69,19 @@ function pageTransitionIn() {
   inAbout.forEach((box) => {
     box.classList.add("active");
   });
-  setTimeout(pageTransitionOut, 3000)
+  setTimeout(pageTransitionOut, 4000);
 }
 
-function pageTransitionOut(){
-    inAbout.forEach((box) => {
+function pageTransitionOut() {
+  inAbout.forEach((box) => {
     box.classList.remove("active");
   });
 }
 
-// get a function that detects scroll position
+window.addEventListener("scroll", scrolling);
+function scrolling() {
+  const scrollPosition = window.scrollY;
+  if (scrollPosition > 200 &&  scrollPosition < 1200) {
+    pageTransitionIn();
+  }
+}
